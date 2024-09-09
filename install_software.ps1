@@ -57,6 +57,7 @@ function instal_software {
     aria2c.exe "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z" -d $path\software
     # move file 
     move $home\install\yt-dlp $path\software
+  
     
     #compress file 
     Rename-Item $path\software\ffmpeg-git-essentials.7z ffmepg.zip
@@ -66,7 +67,7 @@ function instal_software {
     
     
     $oldpath=[System.Environment]::GetEnvironmentVariable('path')
-    $newpath=$oldpath+";$path\software\ffmepg\bin" + ";$path\software\soundpad-craked\soundpad\"  + ";$path\software\yt-dlp"
+    $newpath=$oldpath+";$path\software\ffmepg\bin" + ";$path\software\soundpad-craked\soundpad\"  
     
     [System.Environment]::SetEnvironmentVariable('path',$newpath,'machine')
     
