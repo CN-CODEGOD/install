@@ -22,6 +22,7 @@ install.ps1-install_software.ps1
 2.spd
 3.spd-text-speech
 4.obs
+5.yt-dlp
 ### game:
 1.wegame
 2.steam
