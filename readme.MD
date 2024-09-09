@@ -23,6 +23,7 @@ install.ps1-install_software.ps1
 3.spd-text-speech
 4.obs
 5.yt-dlp
+6.cheat Engine
 ### game:
 1.wegame
 2.steam

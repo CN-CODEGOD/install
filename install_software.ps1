@@ -55,6 +55,7 @@ function instal_software {
     winget install JanDeDobbeleer.OhMyPosh -s winget
     aria2c.exe "https://nodejs.org/dist/v20.17.0/node-v20.17.0-x64.msi" -d $path\software
     aria2c.exe "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z" -d $path\software
+    aria2c.exe "https://d1vdn3r1396bak.cloudfront.net/installer/363949053574335076/0588175" -d $path\software
     # move file 
     move $home\install\yt-dlp $path\software
   
