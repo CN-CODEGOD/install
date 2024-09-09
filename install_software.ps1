@@ -51,7 +51,8 @@ Compress-Archive $home\git\ffmpeg.zip
 
 
 $oldpath=[System.Environment]::GetEnvironmentVariable('path')
-$newpath=$oldpath+";$home\install\ffmepg\bin"
+$newpath=$oldpath+";$home\install\ffmepg\bin" + ";$home\software\soundpad-craked\soundpad\" + ";$home\install\BBDown_1.6.3_20240814_win-x64"  +";$home\aria2-1.37.0-win-32bit-build1"
+
 [System.Environment]::SetEnvironmentVariable('path',$newpath,'machine')
 
 Restart-Computer
