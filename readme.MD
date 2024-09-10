@@ -25,6 +25,8 @@ install.ps1-install_software.ps1
 5.yt-dlp
 6.cheat Engine
 7.lghub
+8.vmware
+9.bitcomet
 ### game:
 1.wegame
 2.steam
