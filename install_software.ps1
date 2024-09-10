@@ -46,6 +46,7 @@ function instal_software {
     md $path\softwar
     winget install --id Microsoft.PowerShell --source winget
     git clone https://github.com/marhau-dev/Soundpad-cracked.git
+    aria2c.exe "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.exe" -d $path\software
     aria2c.exe "https://github.com/medokin/soundpad-text-to-speech/releases/download/v1.1.1/Setup.exe" -d $path\software
     aria2c.exe "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.2.3-Windows-Installer.exe" -d $path\software
     aria2c.exe "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z"-d $path\software
