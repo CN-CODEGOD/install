@@ -31,3 +31,5 @@ install.ps1-install_software.ps1
 1.wegame
 2.steam
 3.xmcl
+4.r星
+5.EPIC games
