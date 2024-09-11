@@ -60,6 +60,7 @@ function install_software {
     aria2c.exe "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.exe" -d $path\software
     aria2c.exe "https://downloads2.broadcom.com/?file=VMware-workstation-full-17.6.0-24238078.exe&oid=31617506&id=QsFTDf239JaXNuFAVwhhnA2nsRKZg85h2pvvA6dzJmEmfeD-OCQL_wPB-SzMANRgY8U=&verify=1725952613-YZaC5tPc5dCbUxlHHKNTSSmPTH6p1amyrR8JahVpEcU%3D" -d $path\software
     aria2c.exe "https://d3mb6vraut285i.cloudfront.net/installer/0973117252055536153/437276" -d $path\software
+    aria2c.exe "https://www.zhornsoftware.co.uk/stickies/stickies_setup_10_1d.exe" -d $path\software
     # move file 
     move $home\install\yt-dlp $path\software
   

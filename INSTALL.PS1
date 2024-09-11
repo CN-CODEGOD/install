@@ -22,7 +22,7 @@ GIT clone https://github.com/CN-CODEGOD/MyBBDown.git
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 git clone https://github.com/CN-CODEGOD/POTconfig.git
-move .\dre 'C:\Program Files\PowerShell\7\Modules\' 
-move .\stream 'C:\Program Files\PowerShell\7\Modules\' 
-move .\script 'C:\Program Files\PowerShell\7\Modules\' 
-& "C:\Users\Administrator\INSTALL\config_env"
+move $PSScriptRoot\dre $pshome\Modules\
+move $PSScriptRoot\stream $pshome\7\Modules\
+move $PSScriptRoot\script $pshome\Modules\ 
+& "$PSScriptRoot\config_env.ps1"

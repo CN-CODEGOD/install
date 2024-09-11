@@ -19,7 +19,7 @@ install.ps1-install_software.ps1
 
 ### software:
 1.pwsh
-2.spd
+2.spd   
 3.spd-text-speech
 4.obs
 5.yt-dlp
@@ -27,6 +27,7 @@ install.ps1-install_software.ps1
 7.lghub
 8.vmware
 9.bitcomet
+10.sti
 ### game:
 1.wegame
 2.steam
