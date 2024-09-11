@@ -1,3 +1,9 @@
+[CmdletBinding()]
+param (
+    [Parameter()]
+    [string]
+    $Path
+)
 
 function install_game {
     [CmdletBinding()]
@@ -37,4 +43,4 @@ function get-aria2c {
     
     
 }
-install_game
+install_game -path $path

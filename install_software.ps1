@@ -1,3 +1,9 @@
+[CmdletBinding()]
+param (
+    [Parameter()]
+    [string]
+    $path
+)
 
 function install_software {
     [CmdletBinding()]
@@ -38,22 +44,21 @@ function install_software {
             }
             catch {
                 write 
-            instal_software
+            install_software
             }
         
         }
 
-    md $path\softwar
-    winget install --id Microsoft.PowerShell --source winget
-    git clone https://github.com/marhau-dev/Soundpad-cracked.git
+    md $path\software
+        cd software
+    git clone https://github.com/marhau-dev/Soundpad-cracked.git 
     aria2c.exe "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.exe" -d $path\software
     aria2c.exe "https://github.com/medokin/soundpad-text-to-speech/releases/download/v1.1.1/Setup.exe" -d $path\software
     aria2c.exe "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.2.3-Windows-Installer.exe" -d $path\software
     aria2c.exe "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z"-d $path\software
     aria2c.exe "https://github.com/yt-dlp/yt-dlp/releases/download/2024.08.06/yt-dlp.exe" -d $path\software\yt-dlp
-    winget install Microsoft.PowerToys -s winget
-    
-    winget install JanDeDobbeleer.OhMyPosh -s winget
+ 
+
     aria2c.exe "https://nodejs.org/dist/v20.17.0/node-v20.17.0-x64.msi" -d $path\software
     aria2c.exe "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z" -d $path\software
     aria2c.exe "https://d1vdn3r1396bak.cloudfront.net/installer/363949053574335076/0588175" -d $path\software
@@ -66,7 +71,7 @@ function install_software {
   
     
     #compress file 
-    Rename-Item $path\software\ffmpeg-git-essentials.7z ffmepg.zip
+    Rename-Item (dir $PSScriptRoot|Where-Object{$_.BaseName -like "*ffmepg*"}).FullName ffmepg.zip
     Compress-Archive $path\software\ffmpeg.zip $path\software\ffmepg
     
     #set env 
@@ -79,4 +84,4 @@ function install_software {
     
     Restart-Computer
 }
-install_software
+install_software -path $path
