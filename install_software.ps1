@@ -24,7 +24,7 @@ function install_software {
         winget
     }
     catch {
-        throw "没有winget 请下载winget后执行"
+        throw 
     }
         function get-aria2c {
             [CmdletBinding()]
@@ -37,7 +37,7 @@ function install_software {
                 & $aria2c        
             }
             catch {
-                write "请输入正确的路径"
+                write 
             instal_software
             }
         
