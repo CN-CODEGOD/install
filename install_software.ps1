@@ -66,7 +66,9 @@ function install_software {
     aria2c.exe "https://lddl01.ldmnq.com/downloader/ldplayerinst9.exe?n=ldplayer9_ld_999_ld.exe" -d $path\software
     aria2c.exe "https://github.com/NickeManarin/ScreenToGif/releases/download/2.41.1/ScreenToGif.2.41.1.Setup.x64.msi" -d $path\software
     aria2c.exe "https://7-zip.org/a/7z2408-x64.exe"   -d $path\softeware
-    }
+    aria2c.exe "https://github.com/Xizo-114514/DiskIconChangerByXizo/releases/download/v1.2.2024.7.17/XizoDiskIconChangerV1.2.exe" -d $path\software
+    git clone https://github.com/CN-CODEGOD/icons.git 
+    
     # move file 
     move $home\install\yt-dlp $path\software
   
