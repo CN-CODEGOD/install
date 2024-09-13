@@ -65,7 +65,7 @@ function install_software {
     aria2c.exe "https://www.zhornsoftware.co.uk/stickies/stickies_setup_10_1d.exe" -d $path\software
     aria2c.exe "https://lddl01.ldmnq.com/downloader/ldplayerinst9.exe?n=ldplayer9_ld_999_ld.exe" -d $path\software
     aria2c.exe "https://github.com/NickeManarin/ScreenToGif/releases/download/2.41.1/ScreenToGif.2.41.1.Setup.x64.msi" -d $path\software
-        
+    aria2c.exe "https://7-zip.org/a/7z2408-x64.exe"   -d $path\softeware
     }
     # move file 
     move $home\install\yt-dlp $path\software
