@@ -43,4 +43,4 @@ function get-aria2c {
     
     
 }
-install_game -path $path
+install_game -path $path    
