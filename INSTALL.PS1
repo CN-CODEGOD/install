@@ -23,7 +23,6 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 git clone https://github.com/CN-CODEGOD/POTconfig.git
 git clone https://github.com/CN-CODEGOD/cracked-jitbit
-move $PSScriptRoot\dre $pshome\Modules\
-move $PSScriptRoot\stream $pshome\7\Modules\
-move $PSScriptRoot\script $pshome\Modules\ 
+    
+[System.Environment]::SetEnvironmentVariable('psmodulepath',"$home\git",'machine')
 & "$PSScriptRoot\config_env.ps1"

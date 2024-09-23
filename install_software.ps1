@@ -49,9 +49,21 @@ function install_software {
         
         }
 
+
+aria2c.exe "https://github.com/ScoopInstaller/Install/blob/master/install.ps1"
+
+        irm get.scoop.sh -outfile 'install.1.ps1'
+.\install.ps1 -RunAsAdmin 
+# I don't care about other parameters and want a one-line command
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+
+
     md $path\software
-        cd software
+        cd software 
     git clone https://github.com/marhau-dev/Soundpad-cracked.git 
+    wget winget 
+    winget install JanDeDobbeleer.OhMyPosh -s winget
+    winget install --id Microsoft.PowerShell.Preview --source winget
     aria2c.exe "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.exe" -d $path\software
     aria2c.exe "https://github.com/medokin/soundpad-text-to-speech/releases/download/v1.1.1/Setup.exe" -d $path\software
     aria2c.exe "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.2.3-Windows-Installer.exe" -d $path\software
@@ -74,15 +86,13 @@ function install_software {
   
     
     #compress file 
-    Rename-Item (dir $path\software\ |Where-Object {$_.BaseName -eq "ffmpeg-2024-09-12-git-504c1ffcd8-essentials_build"}).FullName ffmpeg.zip
-    md $path\software\ffmpeg
-    expand-Archive $path\software\ffmpeg.zip $path\software\ffmpeg
+
     
     #set env 
     
     
     $oldpath=[System.Environment]::GetEnvironmentVariable('path')
-    $newpath=$oldpath+";$path\software\ffmpeg\ffmpeg-2024-09-12-git-504c1ffcd8-essentials_build\bin" + ";$path\software\soundpad-craked\soundpad\"  
+    $newpath= ";$path\software\soundpad-craked\soundpad\"  
     
     [System.Environment]::SetEnvironmentVariable('path',$newpath,'machine')
     
