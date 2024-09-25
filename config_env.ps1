@@ -6,4 +6,4 @@ $newpath = $oldpath+ ";$home\install\aria2-1.37.0-win-32bit-build1"+ ";$home\ins
 [System.Environment]::SetEnvironmentVariable('path',$newpath,'machine')
 $psmodulepath = [System.Environment]::GetEnvironmentVariable("psmodulepath")
 [System.Environment]::SetEnvironmentVariable('psmodulepath',$psmodulepath + ";$PSScriptRoot\git",'machine')
-Restart-Computer    
+Restart-Computer        
