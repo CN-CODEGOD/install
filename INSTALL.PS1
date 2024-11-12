@@ -23,6 +23,10 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 git clone https://github.com/CN-CODEGOD/POTconfig.git
 git clone https://github.com/CN-CODEGOD/cracked-jitbit
-    
+git clone https://github.com/CN-CODEGOD/EX-SYS.git
+
+
+
 [System.Environment]::SetEnvironmentVariable('psmodulepath',"$home\git",'machine')
+
 & "$PSScriptRoot\config_env.ps1"
