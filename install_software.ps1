@@ -20,19 +20,24 @@ function install_software {
         instal_software
     }
 
- 
+ try {
+    wget 
+ }
+ catch {
+    get-weget
+ }
     
-function get-wget {
- #scooptintaller
-curl "https://github.com/ScoopInstaller/Install/blob/master/install.ps1" --output .\install.1.ps1
-
-irm get.scoop.sh -outfile 'install.1.ps1'
-.\install.1.ps1 -RunAsAdmin 
-# I don't care about other parameters and want a one-line command
-iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-
-scoop install wget
-}
+    function get-wget {
+        #scooptintaller
+       curl "https://github.com/ScoopInstaller/Install/blob/master/install.ps1" --output .\install.1.ps1
+       
+       irm get.scoop.sh -outfile 'install.1.ps1'
+       .\install.1.ps1 -RunAsAdmin 
+       # I don't care about other parameters and want a one-line command
+       iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+       
+       scoop install wget
+       }
 
     md $path\software
         cd software 
@@ -66,10 +71,12 @@ scoop install wget
  scoop install node 
  #python 
  scoop install python
+ #go
+ scoop install go
     #FFMPEG
-    md $path\software\ffmpeg
-    start-job {curl "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z" --output $path\software\ffmpeg\ffmpeg.exe}
-    
+    scoop install ffmpeg
+    #docker
+    scoop install docker
     start-job {curl "https://d1vdn3r1396bak.cloudfront.net/installer/363949053574335076/0588175" --output $path\software\cloudfromt}
     #lghub
     start-job {curl "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.exe" --output $path\software\lghub_installer.exe}
@@ -81,10 +88,14 @@ scoop install wget
     start-job {curl "https://7-zip.org/a/7z2408-x64.exe"   --output $path\software\7z_setup.exe}
     start-job{ curl "https://github.com/Xizo-114514/DiskIconChangerByXizo/releases/download/v1.2.2024.7.17/XizoDiskIconChangerV1.2.exe" --output $path\software\DiskIconChangerByXizo_installer.exe}
     start-job {curl "https://download.mypikpak.net/desktop/official_PikPak.exe" --output $Path\software\pikpak_installer.exe}
+    start-job {curl 'https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241112_x64_01.exe' --output $path\software\qq_installer.exe}
+    
+    #icons
     git clone https://github.com/CN-CODEGOD/icons.git 
+    #jitbit
     
-    
-    
+    git clone https://github.com/CN-CODEGOD/cracked-jitbit
+        
   
     
     
