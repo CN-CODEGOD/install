@@ -14,7 +14,7 @@ function install_game {
     )
 
 
-    md $home\game
+    md $path\game
     start-job {curl "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe" -outfile $path\game\steam_installer.exe}
     start-job {curl aria2c.exe "https://dldir1.qq.com/tgc/wegame/miniloader/WeGameMiniLoader.std.5.12.21.1022.exe" --output $path\game\wegame_install.exe}    
     start-job { curl "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.46.1/xmcl-0.46.1-win32-x64.zip" --output $path\game\xmcl_install.exe}

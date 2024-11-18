@@ -24,12 +24,12 @@ function install_software {
     wget 
  }
  catch {
-    get-weget
+    get-wget
  }
     
     function get-wget {
         #scooptintaller
-       curl "https://github.com/ScoopInstaller/Install/blob/master/install.ps1" --output .\install.1.ps1
+       
        
        irm get.scoop.sh -outfile 'install.1.ps1'
        .\install.1.ps1 -RunAsAdmin 
@@ -40,7 +40,7 @@ function install_software {
        }
 
     md $path\software
-        cd software 
+        cd $path\software 
     #soundpad
         git clone https://github.com/marhau-dev/Soundpad-cracked.git 
         try {
@@ -90,6 +90,11 @@ function install_software {
     start-job {curl "https://download.mypikpak.net/desktop/official_PikPak.exe" --output $Path\software\pikpak_installer.exe}
     start-job {curl 'https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241112_x64_01.exe' --output $path\software\qq_installer.exe}
     start-job{curl 'https://github.com/oureveryday/PikPak_By_Shimily_Keygen?tab=readme-ov-file' --output $path\software\pikpak_shimily_installer.exe}
+    MD $pATH\ikuuu
+    start-job {curl 'https://eo35g.big-files.make-w0rld-static.club:8000/file/ikuuu-static-release/cfw-win64/cfw-win64-1.0.1/Clash.for.Windows-0.20.16.3-ikuuu.zip' --outfile $path\software\IKUUu\clash.zip}
+    start-job {curl 'https://dl.ikuuu.live:8000/getClient/469138NmrUJNWDiZlgjTWG?type=v2rayn-win' --outfile $PATH\software\IKUUu\v2rayN.zip}
+
+
     #icons
     git clone https://github.com/CN-CODEGOD/icons.git 
     #jitbit

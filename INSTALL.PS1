@@ -9,10 +9,10 @@ function get-git {
     #scooptintaller
    curl "https://github.com/ScoopInstaller/Install/blob/master/install.ps1" --output .\install.1.ps1
    
-   irm get.scoop.sh -outfile 'install.1.ps1'
+   
    .\install.1.ps1 -RunAsAdmin 
    # I don't care about other parameters and want a one-line command
-   iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+
    
    scoop install git
    }
