@@ -89,7 +89,7 @@ function install_software {
     start-job{ curl "https://github.com/Xizo-114514/DiskIconChangerByXizo/releases/download/v1.2.2024.7.17/XizoDiskIconChangerV1.2.exe" --output $path\software\DiskIconChangerByXizo_installer.exe}
     start-job {curl "https://download.mypikpak.net/desktop/official_PikPak.exe" --output $Path\software\pikpak_installer.exe}
     start-job {curl 'https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241112_x64_01.exe' --output $path\software\qq_installer.exe}
-    
+    start-job{curl 'https://github.com/oureveryday/PikPak_By_Shimily_Keygen?tab=readme-ov-file' --output $path\software\pikpak_shimily_installer.exe}
     #icons
     git clone https://github.com/CN-CODEGOD/icons.git 
     #jitbit
