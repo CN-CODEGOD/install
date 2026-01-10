@@ -20,37 +20,12 @@ function install_software {
         instal_software
     }
 
- try {
-    wget 
- }
- catch {
-    get-wget
- }
-    
-    function get-wget {
-        #scooptintaller
-       
-       
-       irm get.scoop.sh -outfile 'install.1.ps1'
-       .\install.1.ps1 -RunAsAdmin 
-       # I don't care about other parameters and want a one-line command
-       iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-       
-       scoop install wget
-       }
-
     md $path\software
         cd $path\software 
-    #soundpad
-        git clone https://github.com/marhau-dev/Soundpad-cracked.git 
-        try {
-            wget
-        }
-        catch {
-            get_wget
-        }
-        #
     #winget
+    if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+        install-script winget-install -force
+    }
     wget winget 
     #ohmyposh
     winget install JanDeDobbeleer.OhMyPosh -s winget
