@@ -13,9 +13,20 @@ function install_package {
         $Path
     )
 
-    if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
-        install-script winget-install -force
+    function Install-Winget {
+        if (Get-Command winget -ErrorAction SilentlyContinue) {
+            return
+        }
+
+        Install-Script winget-install -Force
+        winget-install
+
+        if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+            throw "winget installation failed."
+        }
     }
+
+    Install-Winget
 
     if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
         irm get.scoop.sh -outfile 'install.1.ps1'
